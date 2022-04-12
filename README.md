@@ -12,7 +12,18 @@
    
 2. Create virtual environment and activate the environment.
 
+    ```sh
+    1.virtualenv env
+    2.source env/bin/activate
+
+    ```
+
 3. install the requirement.txt file
+
+    ```sh
+    pip install -r requirements.txt
+
+    ```
 
 4. Migrate the database
 

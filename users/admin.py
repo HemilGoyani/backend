@@ -2,4 +2,7 @@ from atexit import register
 from django.contrib import admin
 from users.models import User
 
-admin.site.register(User)
+class UserModel(admin.ModelAdmin):
+    list_display = ('username', 'email', 'date_joined', 'is_staff', 'is_active', 'is_superuser')
+    
+admin.site.register(User, UserModel)
