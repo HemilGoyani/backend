@@ -69,7 +69,7 @@ TEMPLATES = [
         },
     },
 ]
-AUTH_USER_MODEL = 'users.CustomUser'
+AUTH_USER_MODEL = 'users.User'
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
