@@ -35,7 +35,7 @@ class UserManager(BaseUserManager):
         return user
 
 
-class User(AbstractBaseUser):  
+class CustomUser(AbstractBaseUser):  
     username = models.CharField(max_length = 20,unique=True)  
     email = models.EmailField(unique=True, max_length = 200)  
     date_joined = models.DateTimeField(default=timezone.now) 
@@ -47,7 +47,7 @@ class User(AbstractBaseUser):
     USERNAME_FIELD = 'email'  
     REQUIRED_FIELDS = ['username']  
 
-    object = UserManager()
+    objects = UserManager()
 
     def __str__(self):
         return self.email
@@ -59,3 +59,5 @@ class User(AbstractBaseUser):
     def has_module_perms(self, app_label):  
         return True
   
+    class Meta:
+        verbose_name = "user"
