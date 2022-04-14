@@ -58,6 +58,3 @@ class User(AbstractBaseUser):
   
     def has_module_perms(self, app_label):  
         return True
-  
-    class Meta:
-        verbose_name = "user"
